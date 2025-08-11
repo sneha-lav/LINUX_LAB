@@ -1,100 +1,144 @@
-Here's a Markdown (`.md`) file that explains the `cp`, `mv`, and `touch` commands, along with an example demonstrating moving a file from one location to another.
+Here’s a **ready-to-use Markdown (`.md`) file** for the commands `cd`, `cp`, `mkdir`, `touch`, `ls`, and `pwd` — including an example of moving one file to another directory.
 
 ---
-
-### 📄 `file-commands.md`
 
 ````markdown
-# Linux File Commands: `cp`, `mv`, `touch`
+# Linux Commands: cd, cp, mkdir, touch, ls, pwd
 
-This document explains three basic Linux commands used to manage files: `cp`, `mv`, and `touch`, with examples.
+This document explains basic Linux commands with examples, including moving a file to another directory.
 
 ---
 
-## 📝 1. `touch` Command
-
-**Usage:**  
-`touch` is used to create an empty file or update the timestamp of an existing file.
+## 📂 1. `cd` – Change Directory
+**Usage:** Move between directories.  
 
 **Syntax:**
 ```bash
-touch filename
+cd directory_name
 ````
 
 **Example:**
 
-```bash
-touch file1.txt
-```
+![alt text](image-5.png)
 
-This command creates an empty file named `file1.txt` in the current directory.
+Moves into the `data1` directory.
 
 ---
 
-## 📋 2. `cp` Command
+## 📋 2. `cp` – Copy Files or Directories
 
-**Usage:**
-`cp` is used to copy files or directories.
+**Usage:** Copy files or directories from one place to another.
 
 **Syntax:**
 
 ```bash
-cp source_file destination_file
+cp source_file destination
 ```
 
 **Example:**
 
-```bash
-cp file1.txt copy_file1.txt
-```
+![alt text](image-6.png)
 
-This creates a copy of `file1.txt` named `copy_file1.txt` in the same directory.
+Creates a copy of `data.txt` named `projects.txt` in the current directory.
 
 ---
 
-## 🔀 3. `mv` Command
+## 📁 3. `mkdir` – Make Directory
 
-**Usage:**
-`mv` is used to move or rename files or directories.
+**Usage:** Create a new folder.
 
 **Syntax:**
 
 ```bash
-mv source_file destination_path
+mkdir folder_name
 ```
 
-**Example: Move File to Another Directory:**
+**Example:**
 
-```bash
-mv file1.txt Documents/
-```
+![alt text](image-7.png)
 
-This command moves `file1.txt` into the `Documents` folder.
-
-If `Documents/` doesn’t exist, it will rename `file1.txt` to `Documents`.
-
-**Example: Rename a File:**
-
-```bash
-mv file1.txt renamed_file.txt
-```
-
-This command renames `file1.txt` to `renamed_file.txt`.
+Creates a directory called `data`.
 
 ---
 
-## 📦 Combined Example: Creating, Copying, and Moving a File
+## 📝 4. `touch` – Create an Empty File
+
+**Usage:** Create an empty file or update the timestamp of an existing file.
+
+**Syntax:**
 
 ```bash
-touch notes.txt           # Create an empty file
-cp notes.txt backup.txt   # Make a copy of the file
-mkdir archive             # Create a new directory named 'archive'
-mv backup.txt archive/    # Move 'backup.txt' to the 'archive' folder
+touch filename
 ```
 
-After running these commands:
+**Example:**
 
-* `notes.txt` remains in the current directory.
-* `backup.txt` is now inside the `archive/` directory.
+![alt text](image-8.png)
+
+Creates an empty file named `data.txt`.
 
 ---
+
+## 📜 5. `ls` – List Files and Directories
+
+**Usage:** Display files and folders in the current directory.
+
+**Syntax:**
+
+```bash
+ls
+```
+
+**Example:**
+
+![alt text](image-9.png)
+
+Lists all files and directories in the current location.
+
+---
+
+## 📍 6. `pwd` – Print Working Directory
+
+**Usage:** Show the full path of the current directory.
+
+**Syntax:**
+
+```bash
+pwd
+```
+
+**Example:**
+
+![alt text](image-11.png)
+
+Might output:
+
+```
+/home/user/Documents
+```
+
+---
+
+## 🔄 Combined Example – Moving a File to Another Directory
+
+**Goal:** Create a file, make a new directory, and move the file there.
+
+```bash
+touch myfile.txt        # Create an empty file
+mkdir myfolder          # Create a new folder
+cp myfile.txt myfolder/ # Copy the file into the folder
+cd myfolder             # Move into the folder
+ls                      # Verify the file is there
+pwd                     # Show current directory path
+```
+
+**Result:**
+
+* `Experiment-2.txt` exists in both the original location and inside `LINUX_LAB`.
+
+---
+
+```
+
+---
+
