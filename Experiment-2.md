@@ -98,6 +98,3 @@ After running these commands:
 * `backup.txt` is now inside the `archive/` directory.
 
 ---
-
-```
-![alt text](<Screenshot 2025-08-11 215406.png>)
