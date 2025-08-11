@@ -1,0 +1,65 @@
+
+
+```markdown
+# Experiment 1 – Installing VirtualBox, Ubuntu, and VS Code
+
+This experiment covers installing **VirtualBox**, setting up **Ubuntu** inside it, and installing **Visual Studio Code** on Ubuntu.
+
+---
+
+## 1️⃣ Install VirtualBox
+1. Download VirtualBox from the official site:  
+   [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)  
+2. Choose **Windows hosts**.  
+3. Run the installer and follow default settings.  
+
+![screenshot](./images/virtualbox-download.png)
+
+---
+
+## 2️⃣ Download Ubuntu ISO
+1. Visit: [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)  
+2. Select **Ubuntu 22.04 LTS** and download the `.iso` file.  
+
+![screenshot](./images/ubuntu-download.png)
+
+---
+
+## 3️⃣ Create Ubuntu VM in VirtualBox
+1. Open VirtualBox → Click **New**.  
+2. Name: *Ubuntu*, Type: **Linux**, Version: **Ubuntu (64-bit)**.  
+3. Allocate **4 GB RAM** and **20 GB+ disk space**.  
+4. In **Settings → Storage**, choose the downloaded Ubuntu ISO.  
+5. Start the VM and install Ubuntu normally.
+
+![screenshot](./images/virtualbox-vm-settings.png)
+
+---
+
+## 4️⃣ Install VS Code in Ubuntu
+1. In Ubuntu, open **Firefox** (default browser).  
+2. Go to: [https://code.visualstudio.com/Download](https://code.visualstudio.com/Download)  
+3. Download the **.deb** package for Debian/Ubuntu.  
+4. Double-click the `.deb` file → Install via Ubuntu Software.  
+5. Launch **VS Code** from the Applications menu.
+
+![screenshot](./images/vscode-install.png)
+
+---
+
+## 5️⃣ Final Setup
+- You can now use VS Code inside Ubuntu for coding.  
+- Enable **full-screen mode** in VirtualBox for a better experience.  
+
+![screenshot](./images/final-setup.png)
+
+---
+
+✅ **You have successfully set up VirtualBox, Ubuntu, and VS Code!**
+```
+
+---
+
+If you want, I can also **add a small diagram** in the README showing
+**Windows → VirtualBox → Ubuntu → VS Code** so it looks even more professional for your GitHub.
+Do you want me to add that diagram?
