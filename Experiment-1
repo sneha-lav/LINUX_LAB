@@ -12,7 +12,7 @@ This experiment covers installing **VirtualBox**, setting up **Ubuntu** inside i
 2. Choose **Windows hosts**.  
 3. Run the installer and follow default settings.  
 
-![alt text](image.png)
+![alt text](images/image.png)
 
 
 ---
@@ -21,7 +21,7 @@ This experiment covers installing **VirtualBox**, setting up **Ubuntu** inside i
 1. Visit: [https://ubuntu.com/download/desktop](https://ubuntu.com/download/desktop)  
 2. Select **Ubuntu 22.04 LTS** and download the `.iso` file.  
 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 ---
 
@@ -32,7 +32,7 @@ This experiment covers installing **VirtualBox**, setting up **Ubuntu** inside i
 4. Double-click the `.deb` file → Install via Ubuntu Software.  
 5. Launch **VS Code** from the Applications menu.
 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 ---
 
@@ -40,7 +40,7 @@ This experiment covers installing **VirtualBox**, setting up **Ubuntu** inside i
 - You can now use VS Code inside Ubuntu for coding.  
 - Enable **full-screen mode** in VirtualBox for a better experience.  
 
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 ---
 

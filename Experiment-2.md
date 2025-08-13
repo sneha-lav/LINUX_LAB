@@ -8,6 +8,7 @@ Here’s a **ready-to-use Markdown (`.md`) file** for the commands `cd`, `cp`, `
 This document explains basic Linux commands with examples, including moving a file to another directory.
 
 ---
+````
 
 ## 📂 1. `cd` – Change Directory
 **Usage:** Move between directories.  
@@ -15,11 +16,11 @@ This document explains basic Linux commands with examples, including moving a fi
 **Syntax:**
 ```bash
 cd directory_name
-````
+```
 
 **Example:**
 
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 Moves into the `data1` directory.
 
@@ -37,7 +38,7 @@ cp source_file destination
 
 **Example:**
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 Creates a copy of `data.txt` named `projects.txt` in the current directory.
 
@@ -55,7 +56,7 @@ mkdir folder_name
 
 **Example:**
 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 
 Creates a directory called `data`.
 
@@ -73,7 +74,7 @@ touch filename
 
 **Example:**
 
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
 Creates an empty file named `data.txt`.
 
@@ -91,7 +92,7 @@ ls
 
 **Example:**
 
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
 Lists all files and directories in the current location.
 
@@ -109,7 +110,7 @@ pwd
 
 **Example:**
 
-![alt text](image-11.png)
+![alt text](images/image-10.png)
 
 Might output:
 
@@ -132,13 +133,4 @@ ls                      # Verify the file is there
 pwd                     # Show current directory path
 ```
 
-**Result:**
-
-* `Experiment-2.txt` exists in both the original location and inside `LINUX_LAB`.
-
----
-
-```
-
----
 
