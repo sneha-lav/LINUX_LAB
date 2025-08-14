@@ -32,6 +32,7 @@ ls
 ```
 Experiment-1.md  Experiment-2.md  Experiment-3.md  image.png  images/  readme.md
 ```
+![alt text](images/image11.png)
 ### 1️⃣`ls -l` → Detailed list (permissions, size, date)
 
 ```bash
@@ -47,7 +48,7 @@ total 77
 drwxr-xr-x 1 hp 197121     0 Aug 13 18:33 images/
 -rw-r--r-- 1 hp 197121   205 Aug 12 13:40 readme.md
 ```
-
+![alt text](/images/image12.png)
 
 ### 2️⃣`ls -a` → Shows hidden files (those starting with `.`)
 
@@ -59,6 +60,7 @@ ls -a
 ```
 ./  ../  .git/  Experiment-1.md  Experiment-2.md  Experiment-3.md  image.png  images/  readme.md
 ```
+![alt text](/images/image13.png)
 
 ### 3️⃣`ls -la` → Combined
 
@@ -79,6 +81,7 @@ drwxr-xr-x 1 hp 197121     0 Aug 13 18:39 .git/
 drwxr-xr-x 1 hp 197121     0 Aug 13 18:33 images/
 -rw-r--r-- 1 hp 197121   205 Aug 12 13:40 readme.md
 ```
+![alt text](/images/image14.png)
 ---
 ### ↪`cd` – Change Directory
 
