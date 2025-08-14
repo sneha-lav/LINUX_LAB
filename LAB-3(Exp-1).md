@@ -17,9 +17,7 @@ pwd
 /Users/yourname/projects
 ```
 📌 Output example:
-```
-/e/New folder/LINUX_LAB
-```
+![alt text](images/image15.png)
 ---
 ### ↪`ls` – List Directory Contents
 
