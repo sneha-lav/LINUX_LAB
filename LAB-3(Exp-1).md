@@ -17,6 +17,8 @@ pwd
 /Users/yourname/projects
 ```
 📌 Output example:
+
+
 ![alt text](images/image15.png)
 ---
 ### ↪`ls` – List Directory Contents
@@ -27,9 +29,8 @@ Lists files and folders in the current directory.
 ls
 ```
 📌 Output example:
-```
-Experiment-1.md  Experiment-2.md  Experiment-3.md  image.png  images/  readme.md
-```
+
+
 ![alt text](images/image11.png)
 ### 1️⃣`ls -l` → Detailed list (permissions, size, date)
 
@@ -37,15 +38,8 @@ Experiment-1.md  Experiment-2.md  Experiment-3.md  image.png  images/  readme.md
 ls -l
 ```
 📌 Output example:
-```
-total 77
--rw-r--r-- 1 hp 197121  1414 Aug 13 18:39 Experiment-1.md
--rw-r--r-- 1 hp 197121  2396 Aug 13 18:39 Experiment-2.md
--rw-r--r-- 1 hp 197121     0 Aug 13 18:45 Experiment-3.md
--rw-r--r-- 1 hp 197121 65237 Aug 13 19:13 image.png
-drwxr-xr-x 1 hp 197121     0 Aug 13 18:33 images/
--rw-r--r-- 1 hp 197121   205 Aug 12 13:40 readme.md
-```
+
+
 ![alt text](/images/image12.png)
 
 ### 2️⃣`ls -a` → Shows hidden files (those starting with `.`)
@@ -55,9 +49,8 @@ ls -a
 ```
 
 📌 Output example:
-```
-./  ../  .git/  Experiment-1.md  Experiment-2.md  Experiment-3.md  image.png  images/  readme.md
-```
+
+
 ![alt text](/images/image13.png)
 
 ### 3️⃣`ls -la` → Combined
@@ -67,18 +60,8 @@ ls -la
 ```
 
 📌 Output example:
-```
-total 85
-drwxr-xr-x 1 hp 197121     0 Aug 13 19:13 ./
-drwxr-xr-x 1 hp 197121     0 Aug  7 11:19 ../
-drwxr-xr-x 1 hp 197121     0 Aug 13 18:39 .git/
--rw-r--r-- 1 hp 197121  1414 Aug 13 18:39 Experiment-1.md
--rw-r--r-- 1 hp 197121  2396 Aug 13 18:39 Experiment-2.md
--rw-r--r-- 1 hp 197121     0 Aug 13 18:45 Experiment-3.md
--rw-r--r-- 1 hp 197121 65237 Aug 13 19:13 image.png
-drwxr-xr-x 1 hp 197121     0 Aug 13 18:33 images/
--rw-r--r-- 1 hp 197121   205 Aug 12 13:40 readme.md
-```
+
+
 ![alt text](/images/image14.png)
 ---
 ### ↪`cd` – Change Directory
