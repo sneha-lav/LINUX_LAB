@@ -28,6 +28,7 @@ You'll usually be prompted to enter your password.
 ```bash
 sudo adduser newusername
 ```
+![alt text](images/image19.png)
 
 You’ll be prompted to set a password and user info.
 
@@ -36,6 +37,7 @@ You’ll be prompted to set a password and user info.
 ```bash
 sudo passwd newusername
 ```
+![alt text](images/image20.png)
 
 ---
 
@@ -60,6 +62,7 @@ sudo usermod -aG sudo alice     # Give 'alice' sudo access
 ```bash
 sudo deluser username
 ```
+![alt text](images/image18.png)
 
 To remove the user's home directory:
 
