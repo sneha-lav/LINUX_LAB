@@ -71,7 +71,7 @@ Moves into a directory.
 ```bash
 cd folder_name
 ```
-![alt text](images/image-16.png)
+![alt text](images/image-17.png)
 
 Examples:
 
@@ -90,8 +90,8 @@ Creates a new folder.
 
 ```bash
 mkdir new_folder
-```
-![alt text](images/image17.png)
+`
+![alt text](images/image-17.png)
 
 ---
 

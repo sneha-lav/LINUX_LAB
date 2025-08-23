@@ -20,7 +20,7 @@ cd directory_name
 
 **Example:**
 
-![alt text](images/image-5.png)
+![alt text](images/image-5%20.png)
 
 Moves into the `data1` directory.
 

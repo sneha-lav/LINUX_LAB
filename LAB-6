@@ -1,0 +1,84 @@
+# Shell Scripting
+
+Shell scripting is the process of writing a series of commands for the shell (a command-line interpreter) to execute. It's commonly used in Unix/Linux environments for automating tasks.
+
+---
+# 🔧What is a Shell?
+A shell is a program that takes commands from the user and gives them to the operating system to execute basically  The most common shells include:
+- **`bash`** (Bourne Again SHell) – most common
+
+- **`sh`** (Bourne shell)
+
+- **`zsh`** (Z shell)
+
+- **`csh`** (C shell)
+---
+# 📜 What is a Shell Script?
+
+A shell script is a text file containing a sequence of shell commands. It usually has a .sh extension.
+
+Example: **`first_script.sh`**
+```
+#!/bin/bash
+echo "Hello, world!"
+```
+---
+# 🔧 Steps to Create and Run a Shell Script in Linux
+ 
+ 1- Check the current working directory:
+ ```
+pwd 
+ ```
+ ![alt text](image.png)
+
+ 2-Create a new folder named **`scripts`**:
+ ```
+ mkdir scripts
+ ```
+ ![alt text](image-1.png)
+
+ 3-Navigate into the **`scripts`** directory:
+ ```
+ cd scripts
+ ```
+ ![alt text](image-3.png)
+
+ 4- Create a new shell script file named **`first_script.sh`**:
+ ```
+ touch first_script.sh
+ ```
+ ![alt text](image-4.png)
+
+ 5-Open the script file using **`nano`** editor:
+ ```
+ nano first_script.sh
+ ```
+ ![alt text](image-5.png)
+
+ 6-Inside **`nano`**, write the commands you want the script to execute.
+
+ For example,
+
+
+ ![alt text](image-7.png)
+
+ 7- Save and exit the editor:
+
+- Press Ctrl + X
+
+- Press Y to confirm saving
+
+- Press Enter to finalize
+
+8- Give execute permission to the script:
+``` 
+chmod +x first_script.sh
+```
+
+![alt text](image-9.png)
+
+9- Run the script:
+```
+./first_script.sh
+```
+![alt text](image-10.png)
