@@ -219,6 +219,10 @@ for f in "${fruits[@]}"; do
   echo "Fruit: $f"
 done
 ```
+OUTPUT:
+
+
+![alt text](images/image-31.png)
 
 ---
 
