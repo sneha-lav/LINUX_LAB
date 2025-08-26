@@ -99,7 +99,7 @@ chmod +x first_script.sh
 
 ---
 
-# Variables
+# 📝 Variables
 
 Store values inside names!
 
@@ -114,7 +114,7 @@ echo "Hi, I'm $name and I'm $age years old."
 
 ---
 
-# User Input
+# 🎤 User Input
 
 ```bash
 echo "Enter your fav subject:"
@@ -124,7 +124,7 @@ echo "You chose $subject "
 ![alt text](images/image-26.png)
 ---
 
-# If–Else ⚖️
+# ⚖️ If–Else 
 
 ```bash
 num=10
@@ -145,7 +145,7 @@ fi
 
 ---
 
-# Loops 🔁
+# 🔁 Loops 
 
 🔹 **For Loop**
 
@@ -169,7 +169,7 @@ done
 ![alt text](images/image-28.png)
 ---
 
-# Functions 🔧
+# 🔧 Functions 
 
 ```bash
 greet() {
@@ -182,7 +182,7 @@ greet "World"
 ![alt text](images/image-29.png)
 ---
 
-# Command Line Arguments 💡
+# 💡 Command Line Arguments 
 
 ```bash
 #!/bin/bash
@@ -209,7 +209,7 @@ Second: banana
 
 ---
 
-# Arrays 🍎🍌🍒
+# 🍎🍌🍒 Arrays 
 
 ```bash
 fruits=("apple" "banana" "cherry")
@@ -256,8 +256,3 @@ echo "Backup saved at $backup ✅"
 
 ---
 
-✨ With emojis + quick examples, it’s **easier for students to learn** than your teacher’s plain version.
-
----
-
-👉 Do you want me to now generate this as a **downloadable `.md` file** like before?
