@@ -1,0 +1,19 @@
+# 📘 Array Scripts Overview
+
+This file explains the idea behind **three array operations**:
+
+---
+
+## 🔹 1. Using `for` Loop
+➡️ Iterates through the array step by step using an index. Best when you clearly know the start and end.
+![alt text](images/image-34.png)
+---
+
+## 🔹 2. Using `while` Loop + Length
+➡️ Uses a counter variable along with the array’s length to move through elements until the condition fails.
+![alt text](images/image-32.png)
+---
+
+## 🔹 3. Array Slicing
+➡️ Extracts a specific portion of the array based on given start and end positions, without changing the original array.
+![alt text](images/image-33.png)
