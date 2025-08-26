@@ -16,4 +16,17 @@ This file explains the idea behind **three array operations**:
 
 ## 🔹 3. Array Slicing
 ➡️ Extracts a specific portion of the array based on given start and end positions, without changing the original array.
+
 ![alt text](images/image-33.png)
+---
+
+## 🔹 4. Nested Loop With Two Arrays️️ 
+
+### ➡️ oops over two arrays (names and age) using nested for loops.
+
+### ➡️ Each element of one array is paired with elements of the other.
+
+### ➡️ Useful when working with multiple lists and combining their values.
+
+
+![alt text](images/image-35.png)
