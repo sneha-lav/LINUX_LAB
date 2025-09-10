@@ -1,136 +1,80 @@
-Here’s a **ready-to-use Markdown (`.md`) file** for the commands `cd`, `cp`, `mkdir`, `touch`, `ls`, and `pwd` — including an example of moving one file to another directory.
+# 📘 LAB2 – Shell Scripting Basics  
+
+This lab demonstrates running and analyzing two simple shell scripts from the `Scripts/` folder:  
+
+- `print_numbers.sh`  
+- `array_loop.sh`  
+
+We will explore their purpose, line-by-line explanations, and example outputs.  
 
 ---
 
-````markdown
-# Linux Commands: cd, cp, mkdir, touch, ls, pwd
+## 🔹 Script 1: `print_numbers.sh`  
 
-This document explains basic Linux commands with examples, including moving a file to another directory.
+### 🎯 Purpose  
+To print numbers from **1 to 5** using a simple loop.  
+
+### 📝 Code Snippet (with output)
+![alt text](images/image-40.png)
+
+## 📖 Line-by-Line Explanation
+
+| Line | Code                                 | Explanation                                                                       |
+| ---- | ------------------------------------ | --------------------------------------------------------------------------------- |
+| 1    | `#!/bin/bash`                        | Shebang – tells the system to use the Bash shell.                                 |
+| 2    | `fruits=("apple" "banana" "cherry")` | Creates an array named `fruits` with 3 elements: `apple`, `banana`, and `cherry`. |
+| 3    | `length=${#fruits[@]}`               | Finds the **length of the array** using `${#array[@]}`. Here, `length = 3`.       |
+| 4    | `echo "Array length:$length"`        | Prints the length of the array.                                                   |
+| 5    | `i=0`                                | Initializes the loop counter `i` to 0 (first index).                              |
+| 6    | `while [ $i -lt $length ] ; do`      | Starts a `while` loop that runs **while `i` is less than the array length**.      |
+| 7    | `echo "Fruit: ${fruits[$i]}"`        | Prints the element of the array at index `i`.                                     |
+| 8    | `((i++))`                            | Increments `i` by 1 after each iteration.                                         |
+| 9    | `done`                               | Marks the end of the `while` loop.                                                |
 
 ---
-````
 
-## 📂 1. `cd` – Change Directory
-**Usage:** Move between directories.  
+## 🔹 Script 2: array_loop.sh
+### 🎯 Purpose
 
-**Syntax:**
+To demonstrate a for loop with a numeric range in Bash.
+
+## 📝 Code Snippet (with output)
+![alt text](images/image-41.png)
+
+## 📖 Line-by-Line Explanation
+| Line | Code                | Explanation                                                                              |
+| ---- | ------------------- | ---------------------------------------------------------------------------------------- |
+| 1    | `#!/bin/bash`       | Shebang → ensures the script runs with the Bash shell.                                   |
+| 2    | *(blank)*           | Just an empty line for readability.                                                      |
+| 3    | `for i in {0..7}`   | Starts a `for` loop. The loop variable `i` will take values from `0` to `7` (inclusive). |
+| 4    | `do`                | Marks the beginning of the loop body.                                                    |
+| 5    | `echo "Number: $i"` | Prints the current value of `i` prefixed with `"Number:"`.                               |
+| 6    | `done`              | Ends the `for` loop.                                                                     |
+
+---
+
+## ❓ Extra Questions
+**Q1.** What is the purpose of #!/bin/bash?
+
+- It is called the shebang. It tells the system to run the script using the Bash shell, ensuring correct execution.
+
+**Q2.** How do you make a script executable?
+- chmod +x scriptname.sh
+
+- Example:
 ```bash
-cd directory_name
+chmod +x print_numbers.sh
+./print_numbers.sh
 ```
 
-**Example:**
+## ✨ Summary
 
-![alt text](images/image-5%20.png)
+- `print_numbers.sh` → Demonstrates a basic for loop.
 
-Moves into the `data1` directory.
+- `array_loop.sh` → Demonstrates using arrays in Bash.
 
----
+- `#!/bin/bash` → Ensures the script runs in the Bash shell.
 
-## 📋 2. `cp` – Copy Files or Directories
-
-**Usage:** Copy files or directories from one place to another.
-
-**Syntax:**
-
-```bash
-cp source_file destination
-```
-
-**Example:**
-
-![alt text](images/image-6.png)
-
-Creates a copy of `data.txt` named `projects.txt` in the current directory.
-
----
-
-## 📁 3. `mkdir` – Make Directory
-
-**Usage:** Create a new folder.
-
-**Syntax:**
-
-```bash
-mkdir folder_name
-```
-
-**Example:**
-
-![alt text](images/image-7.png)
-
-Creates a directory called `data`.
-
----
-
-## 📝 4. `touch` – Create an Empty File
-
-**Usage:** Create an empty file or update the timestamp of an existing file.
-
-**Syntax:**
-
-```bash
-touch filename
-```
-
-**Example:**
-
-![alt text](images/image-8.png)
-
-Creates an empty file named `data.txt`.
-
----
-
-## 📜 5. `ls` – List Files and Directories
-
-**Usage:** Display files and folders in the current directory.
-
-**Syntax:**
-
-```bash
-ls
-```
-
-**Example:**
-
-![alt text](images/image-9.png)
-
-Lists all files and directories in the current location.
-
----
-
-## 📍 6. `pwd` – Print Working Directory
-
-**Usage:** Show the full path of the current directory.
-
-**Syntax:**
-
-```bash
-pwd
-```
-
-**Example:**
-
-![alt text](images/image-10.png)
-
-Might output:
-
-```
-/home/user/Documents
-```
-
----
-
-## 🔄 Combined Example – Moving a File to Another Directory
-
-**Goal:** Create a file, make a new directory, and move the file there.
-
-```bash
-touch myfile.txt        # Create an empty file
-mkdir myfolder          # Create a new folder
-cp myfile.txt myfolder/ # Copy the file into the folder
-cd myfolder             # Move into the folder
-ls                      # Verify the file is there
-pwd                     # Show current directory path
-```
+- `chmod +x` → Makes a script executable.
 
 
