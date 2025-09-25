@@ -2,7 +2,6 @@
 This document summarizes commands executed from Lab3 and Lab5 in Unit-1, along with sample outputs and brief explanations.
 
 ## Lab5 – File Permissions and Ownership
-
 ### Command : `ls -la`
 ```bash
 ls -la
@@ -14,8 +13,7 @@ Output: -rwxr-xr--
 - -a → Includes hidden files (those starting with .  
 
 **Code Snippet:**  
-![alt text](images/image14.png)
-
+![alt text](/images/image14.png)
 ---
 
 ### Command : `chmod` 
@@ -40,10 +38,7 @@ chmod u+x file.txt
 
 
 ### Numeric method:
-![Image](https://github.com/boa3444/Linux_Lab/blob/bd211f01017d54ae44f26c32e84e040abc32618f/images/chmod_numeric.png)  
-
-### Symbolic method:
-![Image](https://github.com/boa3444/Linux_Lab/blob/bd211f01017d54ae44f26c32e84e040abc32618f/images/chmode_symb.png)  
+![alt text](images/image-52.png)
 
 ### Recursive Permission Changes
 
@@ -56,8 +51,7 @@ chmod -R 755 /mydir
 - `-R` → Recursive flag
 
 **Code Snippet:**  
-![Image](https://github.com/boa3444/Linux_Lab/blob/bd211f01017d54ae44f26c32e84e040abc32618f/images/recusrion.png)  
-
+![alt text](images/image-53.png)
 ### Command : `chown`
 -Changes File Ownership.
 ### Example:
@@ -69,9 +63,7 @@ chown newon:group2 data.txt
 **Explanation:**  
 Assigns ownership of `data.txt` to user `newon` and group `group2`.
 **Code Snippet:**  
-![Image](https://github.com/boa3444/Linux_Lab/blob/bd211f01017d54ae44f26c32e84e040abc32618f/images/chown.png)  
-
----
+![alt text](images/image-54.png)
 
 ### Applying All Concepts Together
 
@@ -81,157 +73,260 @@ chmod u+x,g-w project.sh     # Add execute for user, remove write for group
 chown root:admin project.sh  # Change owner to root and group to admin
 ```
 **Code Snippet:**  
-![Image](https://github.com/boa3444/Linux_Lab/blob/bd211f01017d54ae44f26c32e84e040abc32618f/images/final_lab5.png)  
+![alt text](images/image-55.png)
+---
 
-### Commands used: `nano` , `echo`  
-`nano`-Create and edit shell scripts   
-`echo`-prints a string in the output  
 
-```bash
-Create and Edit a file:
-nano file.sh
-Type:
-#!/bin/bash
-echo "Hello, World!"
+## Lab6-Shell Scripting Basics
 
-Save and exit (CTRL+O, CTRL+X in nano).
+# Shell Scripting
 
-Make it executable:
-chmod +x hello.sh
+Shell scripting is the process of writing a series of commands for the shell (a command-line interpreter) to execute. It's commonly used in Unix/Linux environments for automating tasks.
 
-Run it:
-./hello.sh
+---
+# 🔧What is a Shell?
+A shell is a program that takes commands from the user and gives them to the operating system to execute basically  The most common shells include:
+- **`bash`** (Bourne Again SHell) – most common
+
+- **`sh`** (Bourne shell)
+
+- **`zsh`** (Z shell)
+
+- **`csh`** (C shell)
+---
+# 📜 What is a Shell Script?
+
+A shell script is a text file containing a sequence of shell commands. It usually has a .sh extension.
+
+Example: **`first_script.sh`**
 ```
+#!/bin/bash
+echo "Hello, world!"
+```
+---
+# 🔧 Steps to Create and Run a Shell Script in Linux
+ 
+ 1- Check the current working directory:
+ ```
+pwd 
+ ```
+ ![alt text](images/pwd.png)
+
+ 2-Create a new folder named **`scripts`**:
+ ```
+ mkdir scripts
+ ```
+ ![alt text](images/image-1.png)
+
+ 3-Navigate into the **`scripts`** directory:
+ ```
+ cd scripts
+ ```
+ ![alt text](images/cdscripts.png)
+
+ 4- Create a new shell script file named **`first_script.sh`**:
+ ```
+ touch first_script.sh
+ ```
+ ![alt text](images/edit.png)
+
+ 5-Open the script file using **`nano`** editor:
+ ```
+ nano first_script.sh
+ ```
+ ![alt text](images/image-21.png)
+
+ 6-Inside **`nano`**, write the commands you want the script to execute.
+
+ For example,
+
+
+ ![alt text](images/image-24.png)
+ 
+ 7- Save and exit the editor:
+
+- Press Ctrl + X
+
+- Press Y to confirm saving
+
+- Press Enter to finalize
+
+8- Give execute permission to the script:
+``` 
+chmod +x first_script.sh
+```
+
+![alt text](images/image-22.png)
+
+9- Run the script:
+```
+./first_script.sh
+```
+![alt text](images/image-23.png)
+
+---
+
+# 📝 Variables
+
+Store values inside names!
+
 ```bash
+name="Sneha"
+age=18
+echo "Hi, I'm $name and I'm $age years old."
+```
+![alt text](images/image-25.png)
+
+⚡ Tip: No spaces around `=`
+
+---
+
+# 🎤 User Input
+
+```bash
+echo "Enter your fav subject:"
+read subject
+echo "You chose $subject "
+```
+![alt text](images/image-26.png)
+---
+
+# ⚖️ If–Else 
+
+```bash
+num=10
+if [ $num -gt 5 ]; then
+  echo "Bigger than 5 "
+else
+  echo "Smaller or equal "
+fi
+```
+![alt text](images/image-27.png)
+
+🧾 Common operators:
+
+* `-eq` equal
+* `-ne` not equal
+* `-gt` greater
+* `-lt` less
+
+---
+
+# 🔁 Loops 
+
+🔹 **For Loop**
+
+```bash
+for i in {1..3}
+do
+  echo "Round $i 🌀"
+done
+```
+
+🔹 **While Loop**
+
+```bash
+count=1
+while [ $count -le 3 ]
+do
+  echo "Count = $count"
+  ((count++))
+done
+```
+![alt text](images/image-28.png)
+---
+
+# 🔧 Functions 
+
+```bash
+greet() {
+  echo "Hello, $1 👋"
+}
+
+greet "Sneha"
+greet "World"
+```
+![alt text](images/image-29.png)
+---
+
+# 💡 Command Line Arguments 
+
+```bash
+#!/bin/bash
+echo "Script: $0"
+echo "First: $1"
+echo "Second: $2"
+```
+
+Run:
+
+```bash
+./test.sh apple banana
+```
+
 Output:
-Hello, World!
-```
-**Code Snippet:**  
-![Image](https://github.com/boa3444/Linux_Lab/blob/403f04a9ede29da23a4725c007464fbe7182689b/images/echo.png)
 
-### Commands used : `read`, `echo`
-read → takes input from the user.  
-$username → retrieves the value.  
+```
+Script: ./test.sh
+First: apple
+Second: banana
+```
+![alt text](images/image-30.png)
+
+
+---
+
+# 🍎🍌🍒 Arrays 
+
+```bash
+fruits=("apple" "banana" "cherry")
+echo "First fruit: ${fruits[0]}"
+
+for f in "${fruits[@]}"; do
+  echo "Fruit: $f"
+done
+```
+OUTPUT:
+
+
+![alt text](images/image-31.png)
+
+---
+
+# Useful Commands 🛠️
+
+* `date` → 📅 current time
+* `whoami` → 🙋 current user
+* `ls` → 📂 list files
+* `pwd` → 📍 working directory
+* `cat file.txt` → 📖 show file
+
+---
+
+# Mini Project 🌟 – Auto Backup
 
 ```bash
 #!/bin/bash
-
-echo "Enter your name:"
-read username
-
-echo "Hello, $username! Welcome to shell scripting."  
+backup="/tmp/backup_$(date +%H%M).tar.gz"
+tar -czf $backup $HOME
+echo "Backup saved at $backup ✅"
 ```
-**Code Snippet:**  
-![Image](https://github.com/boa3444/Linux_Lab/blob/403f04a9ede29da23a4725c007464fbe7182689b/images/echo_code.png)  
-**Output:**   
-![Image](https://github.com/boa3444/Linux_Lab/blob/403f04a9ede29da23a4725c007464fbe7182689b/images/user_input.png)  
 
-### Statements used : `if`, `else`  
--provides conditional execution, allowing different blocks of code to run based on whether a condition evaluates to true or false.
-
-``` bash
-Our code's objective:
-Checks some specified conditions with if-else.
-```
-**Code Snippet:**    
-![Image](https://github.com/boa3444/Linux_Lab/blob/403f04a9ede29da23a4725c007464fbe7182689b/images/if_else.png)   
-**OUTPUT:**  
-![Image](https://github.com/boa3444/Linux_Lab/blob/82fec135ec1db3de24f12e4d6f6e1b1978cb233b/images/6lab.png)   
 ---
-## Lab5 – PRACTICE  
-# 🧪 Practice Experiment – Creating Users and Groups
 
-This section documents the commands executed during the practice experiment, along with brief explanations and screenshots.  
-**Procedure:**
-```bash
-1. Create a New User  
-2. Create a New Group  
-3. Add User to the Group
-4. Create a File
-5. Assign Ownership to User and Group
-6. Verify Ownership
-```  
-**Code Snippet:**    
-![CODE](https://github.com/boa3444/Linux_Lab/blob/403f04a9ede29da23a4725c007464fbe7182689b/images/practice5.png)      
-**Explanation:**
-```bash
-sudo useradd -m newuser
--Creates a new user `newuser` and sets up a home directory at `/home/newuser`.
+# 📒 Cheat Sheet (Quick Recall)
 
-sudo groupadd newgroup
--Creates a new group named `newgroup`.
+| Feature | Syntax            | Example           |
+| ------- | ----------------- | ----------------- |
+| Print   | `echo`            | `echo "Hi"`       |
+| Var     | `var=value`       | `x=10`            |
+| Input   | `read var`        | `read name`       |
+| If      | `if [ cond ]`     | `if [ $x -gt 5 ]` |
+| For     | `for i in {1..5}` | `echo $i`         |
+| While   | `while [ cond ]`  | `((count++))`     |
 
-sudo usermod -aG newgroup newuser
--Adds `newuser` to `newgroup` without removing them from existing groups.
-
-touch testfile.txt
--Creates an empty file named `testfile.txt`.
-
-sudo chown newuser:newgroup testfile.txt
--Assign ownership of the file to newuser and newgroup
-
-ls -l testfile.txt
--Verify Ownership
-```
 ---
-## Lab6 – Shell Scripting Basics
-### Commands include : Accessing Variables, Taking a user's input  
-**To access a variable in shell scripting we prefix its name with a dollar sign**  
-**We use `read` command to take a user's input**  
 
-```bash
-Code
-#!/bin/bash
-echo "hi"
-name="Divyanshi"
-age=17
-echo "My name is $name and I am $age years old."
-echo $HOME
-echo "Whats your fav food:"
-read food
-echo "My fav food is $food"
-```
----
-**Code Snippet:**    
-![Code snippet](https://github.com/boa3444/Linux_Lab/blob/82fec135ec1db3de24f12e4d6f6e1b1978cb233b/images/echo_code.png)   
-**OUTPUT:**  
-![output](https://github.com/boa3444/Linux_Lab/blob/82fec135ec1db3de24f12e4d6f6e1b1978cb233b/images/user_input.png)  
-
-### Command : `for` loop  
--control flow statement used to iterate over a list of items and execute a block of commands for each item.   
-**Code Snippet:**  
-Objective: Iterate over an array with for loop.    
-![Code snippet](https://github.com/boa3444/Linux_Lab/blob/82fec135ec1db3de24f12e4d6f6e1b1978cb233b/images/for_loop.png)
-
-### Command : `while` loop 
--a while loop repeatedly executes a block of commands as long as a specified condition remains true.  
-**Code Snippet:**  
-Objective: Looping through an array by adding +1 a variable in each iteration.  
-![Image](https://github.com/boa3444/Linux_Lab/blob/82fec135ec1db3de24f12e4d6f6e1b1978cb233b/images/while_loop.png)  
-
-### Command : `until` loop 
--The until loop in shell scripting is a control flow statement that repeatedly executes a block of commands as long as a given condition remains false.  
-**Code Snippet:**  
-Objective: A chosen element from an array is getting subtracted till it becomes equal to another chosen element from the same array.  
-![Image](https://github.com/boa3444/Linux_Lab/blob/82fec135ec1db3de24f12e4d6f6e1b1978cb233b/images/until_loop.png)  
-
-### Commands include: Creating funtions
-Objective of this code: To say bye to the given input.   
-**Code Snippet:**  
-![Code snippet](https://github.com/boa3444/Linux_Lab/blob/82fec135ec1db3de24f12e4d6f6e1b1978cb233b/images/function.png)    
-
-### Commands include: Iterating over the elements of an array named `fruits`
-**Code Snippet:**    
-![](https://github.com/boa3444/Linux_Lab/blob/82fec135ec1db3de24f12e4d6f6e1b1978cb233b/images/for_loop.png)  
-
-### Some command line arguments:
-- Accessing the arguments passed by user in command line.  
-
-**Code snippet:**
-![](https://github.com/boa3444/Linux_Lab/blob/5a24ddc6585b32eee5ba3b41267698862a9c8aa2/images/com_line.png)  
-
-### Useful commands: `date`, `whoami`, `ls`, `cat`
-![](https://github.com/boa3444/Linux_Lab/blob/5a24ddc6585b32eee5ba3b41267698862a9c8aa2/images/userful.png)  
 
 
 # Extra Questions:  

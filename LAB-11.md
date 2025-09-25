@@ -14,7 +14,7 @@ Output: -rwxr-xr--
 - -a → Includes hidden files (those starting with .  
 
 **Code Snippet:**  
-![USING THESE COMMANDS IN CODE](https://github.com/boa3444/Linux_Lab/blob/bd211f01017d54ae44f26c32e84e040abc32618f/images/command1.png)  
+![alt text](images/command1.png)
 
 ---
 
@@ -40,11 +40,10 @@ chmod u+x file.txt
 
 
 ### Numeric method:
-![Image](https://github.com/boa3444/Linux_Lab/blob/bd211f01017d54ae44f26c32e84e040abc32618f/images/chmod_numeric.png)  
+![alt text](images/chmod_numeric.png)
 
 ### Symbolic method:
-![Image](https://github.com/boa3444/Linux_Lab/blob/bd211f01017d54ae44f26c32e84e040abc32618f/images/chmode_symb.png)  
-
+![alt text](images/chmode_symb.png)
 ### Recursive Permission Changes
 
 -Apply changes to all files and subdirectories.
@@ -56,7 +55,7 @@ chmod -R 755 /mydir
 - `-R` → Recursive flag
 
 **Code Snippet:**  
-![Image](https://github.com/boa3444/Linux_Lab/blob/bd211f01017d54ae44f26c32e84e040abc32618f/images/recusrion.png)  
+![alt text](images/recusrion.png)
 
 ### Command : `chown`
 -Changes File Ownership.
@@ -69,8 +68,7 @@ chown newon:group2 data.txt
 **Explanation:**  
 Assigns ownership of `data.txt` to user `newon` and group `group2`.
 **Code Snippet:**  
-![Image](https://github.com/boa3444/Linux_Lab/blob/bd211f01017d54ae44f26c32e84e040abc32618f/images/chown.png)  
-
+![alt text](images/chown.png)
 ---
 
 ### Applying All Concepts Together
@@ -81,7 +79,7 @@ chmod u+x,g-w project.sh     # Add execute for user, remove write for group
 chown root:admin project.sh  # Change owner to root and group to admin
 ```
 **Code Snippet:**  
-![Image](https://github.com/boa3444/Linux_Lab/blob/bd211f01017d54ae44f26c32e84e040abc32618f/images/final_lab5.png)  
+![alt text](images/final_lab5.png)
 
 ### Commands used: `nano` , `echo`  
 `nano`-Create and edit shell scripts   
@@ -107,7 +105,7 @@ Output:
 Hello, World!
 ```
 **Code Snippet:**  
-![Image](https://github.com/boa3444/Linux_Lab/blob/403f04a9ede29da23a4725c007464fbe7182689b/images/echo.png)
+![alt text](images/echo.png)
 
 ### Commands used : `read`, `echo`
 read → takes input from the user.  
@@ -122,9 +120,7 @@ read username
 echo "Hello, $username! Welcome to shell scripting."  
 ```
 **Code Snippet:**  
-![Image](https://github.com/boa3444/Linux_Lab/blob/403f04a9ede29da23a4725c007464fbe7182689b/images/echo_code.png)  
-**Output:**   
-![Image](https://github.com/boa3444/Linux_Lab/blob/403f04a9ede29da23a4725c007464fbe7182689b/images/user_input.png)  
+![alt text](images/echo_code.png)
 
 ### Statements used : `if`, `else`  
 -provides conditional execution, allowing different blocks of code to run based on whether a condition evaluates to true or false.
